@@ -1,0 +1,52 @@
+
+
+header{
+    display: inline;
+}
+header a{
+
+}
+body{
+    color: gray;
+}
+h2{
+    display: inline-block;
+}
+.weather_elements{
+    display: inline-block;
+}
+.degree{
+    font-size: 70px;
+    font-weight: bold;
+}
+.weather_elements li {
+    display: inline-block;
+}
+.weather_element{
+    display: block;
+}
+.weather_element li
+{
+    color: white;
+    margin-top: 10px;
+    background-color: gray;
+    display: block;
+}
+/* Style the links inside the navigation bar */
+body{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.weather_elements {
+    display: inline-block;
+}
+.refresh{
+    display: inline-block;
+}
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+
+}
