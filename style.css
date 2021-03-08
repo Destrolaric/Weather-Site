@@ -199,12 +199,12 @@ button {
 }
 
 .weather_elements {
-    list-style: none;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vmax;
+    list-style: none;
 }
+
 
 .refresh {
     display: inline-block;
