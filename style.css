@@ -223,6 +223,7 @@ button {
 .add_city_text_bar {
     height: 32px;
     width: 50%;
+    font-size: 24px;
 }
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
