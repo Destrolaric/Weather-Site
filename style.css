@@ -63,10 +63,6 @@ body {
 .city_name {
     font-weight: bold;
 }
-
-.weather_elements li {
-}
-
 .weather_element {
     display: block;
 }
@@ -76,7 +72,7 @@ body {
     color: white;
     margin-top: 10px;
     background-color: gray;
-
+    list-style: none;
 }
 
 h2 {
