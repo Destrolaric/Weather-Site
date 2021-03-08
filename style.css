@@ -31,6 +31,11 @@ h2{
     margin-top: 10px;
     background-color: gray;
     display: block;
+
+}
+.weather_element li span{
+    display: inline-block;
+    justify-content: space-around;
 }
 /* Style the links inside the navigation bar */
 body{
@@ -39,7 +44,17 @@ body{
     font-weight: bold;
     margin: 0;
 }
-
+.refreshButton {
+    text-align: center;
+    width: 20vmax;
+    height: 4.5vmax;
+    font-size: 2vmax;
+    color: white;
+    text-decoration: none;
+    border-radius: 100vmax;
+    background: #00BFFF;
+    transition: 0.2s;
+}
 .weather_elements {
     display: inline-block;
 }
