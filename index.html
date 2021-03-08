@@ -12,38 +12,55 @@
         Погода Здесь
     </h2>
     <button class="refresh">
-        Обновить геолокацию
+        <span>Обновить геолокацию</span>
+        <img src="pics/refresh.svg">
     </button>
 </header>
 <main>
-    <h1>Saint-Petersburg</h1>
-    <span class="degree"> 25°C</span>
+    <div class="main_city">
+        <h1>Saint-Petersburg</h1>
+        <img class="weather_icon" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+        <span class="degree"> 25°C</span>
 
-    <ul class="weather_element">
-        <li>
-            <span>Ветер</span> <span>6.0 м/с</span>
-        </li>
-        <li>
-            <span>Облачность</span><span>Облачно</span>
-        </li>
-        <li>
-            <span>Давление</span><span>1000 кПа</span>
-        </li>
-        <li>
-            <span>Влажность</span><span>50%</span>
-        </li>
-        <li>
-            <span>Координаты</span><span>[-102.23][323.32]</span>
-        </li>
-    </ul>
-    <h1>
-        Избранное
-    </h1>
+        <ul class="weather_element">
+            <li>
+                <span>Ветер</span> <span>6.0 м/с</span>
+            </li>
+            <li>
+                <span>Облачность</span><span>Облачно</span>
+            </li>
+            <li>
+                <span>Давление</span><span>1000 кПа</span>
+            </li>
+            <li>
+                <span>Влажность</span><span>50%</span>
+            </li>
+            <li>
+                <span>Координаты</span><span>[-102.23][323.32]</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="city_favorites">
+
+        <h1>
+            Избранное
+        </h1>
+        <span class="add_city">
+            <input class="add_city_text_bar" type="text" placeholder="Добавить новый город.." name="add">
+            <button class="add_and_close">+</button>
+        </span>
+    </div>
     <ul class="weather_elements">
         <li>
-            <h3>
-                Moscow
-            </h3>
+            <span class="city_info">
+                <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
             <ul class="weather_element">
                 <li>
                     <span>Ветер</span> <span>6.0 м/с</span>
@@ -63,9 +80,14 @@
             </ul>
         </li>
         <li>
-            <h3>
-                Helsinki
-            </h3>
+            <span class="city_info">
+                <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
             <ul class="weather_element">
                 <li>
                     <span>Ветер</span> <span>6.0 м/с</span>
@@ -85,9 +107,14 @@
             </ul>
         </li>
         <li>
-            <h3>
-                Moscow
-            </h3>
+            <span class="city_info">
+                <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
             <ul class="weather_element">
                 <li>
                     <span>Ветер</span> <span>6.0 м/с</span>
@@ -107,9 +134,43 @@
             </ul>
         </li>
         <li>
-            <h3>
-                Helsinki
-            </h3>
+            <span class="city_info">
+                <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
+            <ul class="weather_element">
+                <li>
+                    <span>Ветер</span> <span>6.0 м/с</span>
+                </li>
+                <li>
+                    <span>Облачность</span>
+                    <span>Облачно</span>
+                </li>
+                <li>
+                    <span>Давление</span>
+                    <span>1000 кПа</span>
+                </li>
+                <li>
+                    <span>Влажность</span><span>50%</span>
+                </li>
+                <li>
+                    <span>Координаты</span><span>[-102.23][323.32]</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="city_info">
+                 <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
             <ul class="weather_element">
                 <li>
                     <span>Ветер</span> <span>6.0 м/с</span>
@@ -129,31 +190,14 @@
             </ul>
         </li>
         <li>
-            <h3>
-                Moscow
-            </h3>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <h3>
-                Helsinki
-            </h3>
+            <span class="city_info">
+                <span>Moscow</span>
+                <span class="degree_small"> 25°C</span>
+                <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
+                <div>
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
             <ul class="weather_element">
                 <li>
                     <span>Ветер</span> <span>6.0 м/с</span>
