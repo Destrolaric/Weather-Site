@@ -20,9 +20,7 @@ body {
     color: gray;
 }
 
-.weather_elements {
-    display: inline-block;
-}
+
 
 .degree {
     font-size: 80px;
@@ -72,7 +70,7 @@ body {
     color: white;
     margin-top: 10px;
     background-color: gray;
-    list-style: none;
+    list-style: none
 }
 
 h2 {
@@ -201,6 +199,8 @@ button {
 }
 
 .weather_elements {
+    list-style: none;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vmax;
