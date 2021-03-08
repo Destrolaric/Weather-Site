@@ -1,11 +1,11 @@
 
 header {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.25fr 0.75fr;
     grid-template-rows: 1fr;
     gap: 0 0;
     grid-template-areas:
-    "h2 refresh .";
+    "h2 refresh";
 }
 
 h2 {
@@ -19,7 +19,6 @@ h2 {
 body {
     color: gray;
 }
-
 
 
 .degree {
@@ -61,8 +60,12 @@ body {
 .city_name {
     font-weight: bold;
 }
+
 .weather_element {
     display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }
 
 .weather_element li {
@@ -71,6 +74,7 @@ body {
     margin-top: 10px;
     background-color: gray;
     list-style: none
+
 }
 
 h2 {
@@ -78,6 +82,8 @@ h2 {
 }
 
 .main_city {
+    padding-left: 40px;
+
     display: grid;
     grid-template-columns: 1fr 0.9fr 1.1fr 1fr;
     grid-template-rows: 0.5fr 1.5fr;
@@ -153,6 +159,8 @@ body {
 }
 
 .city_favorites {
+    padding-right: 40px;
+    padding-left: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -166,10 +174,12 @@ body {
 }
 
 .add_city {
+    height: 50%;
 
 }
 
 .add_and_close {
+
     text-decoration: none;
     align-self: center;
     color: white;
@@ -179,6 +189,7 @@ body {
     width: 32px;
     height: 32px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 button {
@@ -212,8 +223,8 @@ button {
 
 .refresh img {
     display: none;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
 }
 
 .refresh span {
@@ -221,13 +232,31 @@ button {
 }
 
 .add_city_text_bar {
-    height: 32px;
     width: 50%;
     font-size: 24px;
 }
 
+h2 {
+    padding-left: 40px;
+}
+
+.city_favorites h1 {
+    padding-left: 40px;
+}
+
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media all and (max-width: 1000px) {
+    header {
+        grid-template-columns: 0.75fr 0.25fr;
+
+    }
+
+    .add_and_close {
+        width: 64px;
+        height: 64px;
+        font-size: 48px;
+    }
+
     .refresh {
         width: min-content;
         height: min-content;
@@ -248,7 +277,13 @@ button {
         padding: 0;
     }
 
+    .main_city .weather_element {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     .main_city {
+        padding-right: 40px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.5fr 0.5fr 1.5fr;
         grid-template-areas:
@@ -264,6 +299,29 @@ button {
 
     .city_favorites span {
         text-align: left;
+    }
+
+    .icon_small {
+
+        width: 128px;
+        height: 128px;
+    }
+
+    .weather_icon {
+        width: 256px;
+        height: 256px;
+    }
+
+    .add_city_text_bar {
+        height: 128px;
+    }
+
+    .degree {
+        font-size: 256px;
+    }
+
+    h2 {
+        font-size: 64px;
     }
 }
 
