@@ -240,17 +240,16 @@ h2 {
     padding-left: 40px;
 }
 
-.city_favorites h1 {
-    padding-left: 40px;
-}
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media all and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     header {
         grid-template-columns: 0.75fr 0.25fr;
 
     }
-
+    .add_city_text_bar{
+        width: inherit;
+    }
     .add_and_close {
         width: 64px;
         height: 64px;
@@ -267,6 +266,7 @@ h2 {
     }
 
     .refresh img {
+        border-radius: 50%;
         display: inline-block;
     }
 
@@ -285,7 +285,8 @@ h2 {
     .main_city {
         padding-right: 40px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 0.5fr 1.5fr;
+        height: min-content;
+        grid-template-rows: 0.3fr 1fr 0.5fr;
         grid-template-areas:
     "h1 h1 "
     "weather_icon degree"
@@ -303,8 +304,8 @@ h2 {
 
     .icon_small {
 
-        width: 128px;
-        height: 128px;
+        width: 64px;
+        height: 64px;
     }
 
     .weather_icon {
@@ -313,20 +314,21 @@ h2 {
     }
 
     .add_city_text_bar {
-        height: 128px;
+        font-size: 48px;
     }
 
     .degree {
-        font-size: 256px;
+        font-size: 128px;
     }
 
     h2 {
         font-size: 64px;
     }
-}
-
-@media all and (min-width: 320px) {
     body {
         overflow-x: hidden;
     }
+}
+
+@media only screen and (min-width: 320px) {
+
 }
