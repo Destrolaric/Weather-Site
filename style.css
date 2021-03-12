@@ -89,13 +89,13 @@ h2 {
     grid-template-rows: 0.5fr 1.5fr;
     gap: 0 0;
     grid-template-areas:
-    "h1 h1 weather_element weather_element"
+    "City-Name City-Name weather_element weather_element"
     "weather_icon degree weather_element weather_element"
 
 }
 
-.h1 {
-    grid-area: CityName;
+h1 {
+    grid-area: City-Name;
 }
 
 .weather_element {
@@ -288,7 +288,7 @@ h2 {
         height: min-content;
         grid-template-rows: 0.3fr 1fr 0.5fr;
         grid-template-areas:
-    "h1 h1 "
+    "City-Name City-Name "
     "weather_icon degree"
     "weather_element weather_element"
     }
