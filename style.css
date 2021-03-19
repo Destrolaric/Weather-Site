@@ -75,7 +75,6 @@ body {
 
 .weather_element {
     display: block;
-    padding-left: 40px;
     font-size: 32px;
 }
 
@@ -221,6 +220,7 @@ button {
 }
 
 .weather_elements {
+    padding-right: 40px;
     grid-row-gap: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
