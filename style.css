@@ -224,6 +224,7 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vmax;
     list-style: none;
+    padding-right: 40px;
 }
 
 
