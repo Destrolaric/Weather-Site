@@ -28,28 +28,41 @@ body {
 }
 
 .city_info {
-    display: grid;
-    grid-template-columns: 2fr 1.5fr 2fr 3fr;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
 }
 
-.city_info:nth-child(1) {
-    text-align: center;
+.city_main_info span {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 48px;
+    text-align: left;
 }
 
-.city_info:nth-child(4) {
-    text-align: right;
-    margin-left: 40px;
+.city_info {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.city_main_info {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
 }
 
 .icon_small {
     width: 64px;
     height: 64px;
     float: right;
+    vertical-align: middle;
 
+}
+
+.remove_button {
+    align-self: center;
 }
 
 .degree_small {
@@ -65,11 +78,12 @@ body {
     display: block;
     padding-left: 40px;
     padding-right: 40px;
-
+    font-size: 32px;
 }
 
 .weather_element li {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     color: white;
     margin-top: 10px;
     background-color: gray;
@@ -110,15 +124,6 @@ h2 {
     grid-area: degree;
 }
 
-.weather_element li {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-self: stretch;
-}
-
-.weather_element li span:nth-child(2) {
-    text-align: end;
-}
 
 /* Style the links inside the navigation bar */
 body {
@@ -176,6 +181,11 @@ body {
 .add_city {
     height: 50%;
 
+}
+
+.weather_icon {
+    width: 256px;
+    height: 256px;
 }
 
 .add_and_close {
@@ -247,9 +257,11 @@ h2 {
         grid-template-columns: 0.75fr 0.25fr;
 
     }
-    .add_city_text_bar{
+
+    .add_city_text_bar {
         width: inherit;
     }
+
     .add_and_close {
         width: 64px;
         height: 64px;
@@ -308,11 +320,6 @@ h2 {
         height: 64px;
     }
 
-    .weather_icon {
-        width: 256px;
-        height: 256px;
-    }
-
     .add_city_text_bar {
         font-size: 48px;
     }
@@ -324,6 +331,7 @@ h2 {
     h2 {
         font-size: 64px;
     }
+
     body {
         overflow-x: hidden;
     }
