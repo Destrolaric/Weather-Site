@@ -3,41 +3,43 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="author" content="Destrolaric">
+    <meta name="keywords" content="Погода, Weather">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onresize="buttonWidth()">
 <header>
     <h2 class="sub_header">
         Погода Здесь
     </h2>
-    <button class="refresh">
+    <button class="refresh" onclick="updateGeoPosition()" id="refresh">
         <span>Обновить геолокацию</span>
         <img src="pics/refresh.svg">
     </button>
 </header>
 <main>
     <section class="main_city">
-        <h1 class="head">Saint-Petersburg</h1>
+        <h2 class="head">Loading...</h2>
         <img class="weather_icon" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-        <span class="degree"> 25°C</span>
+        <span class="degree"> </span>
 
         <ul class="weather_element">
-            <li>
-                <span>Ветер</span> <span>6.0 м/с</span>
+            <li id="wind">
+                <p class="weatherInfo">Ветер</p> <p class="weatherInfo">...</p>
             </li>
-            <li>
-                <span>Облачность</span><span>Облачно</span>
+            <li id="clouds">
+                <p class="weatherInfo">Облачность</p><p class="weatherInfo">...</p>
             </li>
-            <li>
-                <span>Давление</span><span>1000 кПа</span>
+            <li id="pressure">
+                <p class="weatherInfo">Давление</p><p class="weatherInfo">...</p>
             </li>
-            <li>
-                <span>Влажность</span><span>50%</span>
+            <li id="humidity">
+                <p class="weatherInfo">Влажность</p><p class="weatherInfo">...</p>
             </li>
-            <li>
-                <span>Координаты</span><span>[-102.23][323.32]</span>
+            <li id="coordinates">
+                <p class="weatherInfo">Координаты</p><p class="weatherInfo">...</p>
             </li>
         </ul>
     </section>
@@ -53,184 +55,38 @@
         </span>
     </section>
     <ul class="weather_elements">
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span>
-                    <span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span>
-                    <span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <span class="city_info">
-                <div class="city_main_info">
-                    <span>Moscow</span>
-                    <span class="degree_small"> 25°C</span>
-                    <img class="icon_small" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-                </div>
-                <div class="remove_button">
-                    <button class="add_and_close">x</button>
-                </div>
-            </span>
-            <ul class="weather_element">
-                <li>
-                    <span>Ветер</span> <span>6.0 м/с</span>
-                </li>
-                <li>
-                    <span>Облачность</span><span>Облачно</span>
-                </li>
-                <li>
-                    <span>Давление</span><span>1000 кПа</span>
-                </li>
-                <li>
-                    <span>Влажность</span><span>50%</span>
-                </li>
-                <li>
-                    <span>Координаты</span><span>[-102.23][323.32]</span>
-                </li>
-            </ul>
-        </li>
     </ul>
+</main>
+    <template id="templateFavouriteCity">
+        <div class="city">
+            <span class="city_info">
+                <div class="city_main_info">
+                    <h4>Loading...</h4>
+                    <span class="degree_small"></span>
+                    <img class="icon_small" src="pics/refresh.svg-45_390495.svg" alt="">
+                </div>
+                <div class="remove_button">
+                    <button class="add_and_close">x</button>
+                </div>
+            </span>
+            <ul class="weather_element">
+                <li id="wind">
+                    <p class="weatherInfo">Ветер</p> <p class="weatherInfo">...</p>
+                </li>
+                <li id="clouds">
+                    <p class="weatherInfo">Облачность</p><p class="weatherInfo">...</p>
+                </li>
+                <li id="pressure">
+                    <p class="weatherInfo">Давление</p><p class="weatherInfo">...</p>
+                </li>
+                <li id="humidity">
+                    <p class="weatherInfo">Влажность</p><p class="weatherInfo">...</p>
+                </li>
+                <li id="coordinates">
+                    <p class="weatherInfo">Координаты</p><p class="weatherInfo">...</p>
+                </li>
+        </div>
+    </template>
 </main>
 </body>
 </html>
