@@ -1,4 +1,4 @@
-const api = "b15bf862390a4bd783a42e1edb3be371"
+const api = "4ebd41ef190c4dbdbc6c3b8cab1e5e31"
 
 async function fetchCityByName(name) {
     const url = `https://api.weatherbit.io/v2.0/current?key=${api}&city=${name}`

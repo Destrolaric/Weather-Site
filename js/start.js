@@ -1,7 +1,7 @@
-window.onload = function () {
+window.onload = async function () {
     updateGeo()
     let values = Object.keys(window.localStorage);
-    for (let value of values) {
+    for await (let value of values) {
         let name = window.localStorage.getItem(value)
         loadCity();
         let OnSuccess = (data) => {
