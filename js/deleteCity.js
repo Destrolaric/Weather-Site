@@ -3,6 +3,5 @@ function deleteCity(obj) {
     console.log(id)
     window.localStorage.removeItem(id);
     obj.parentElement.parentElement.parentElement.remove();
-    parentElement.parentElement.parentElement.innerHTML =""
 
 }

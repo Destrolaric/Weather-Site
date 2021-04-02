@@ -4,11 +4,13 @@ let onSuccess = (data) => {
 let onFailure = (e) => {
     alert(e)
 }
+
 async function getWeatherFromPosition(pos) {
     let lat = pos.coords.latitude
     let lon = pos.coords.longitude
-    let data = await fetchCitybyCoord(lat, lon).then(onSuccess).catch(onFailure)
+    let data = await fetchCityByCoordinate(lat, lon).then(onSuccess).catch(onFailure)
 }
+
 function updateGeo() {
 
     let headerCity = document.querySelector('.main_city');
