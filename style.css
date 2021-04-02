@@ -193,10 +193,10 @@ body {
     background: gray;
     border-radius: 50%;
     transition: 0.2s;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 32px;
 }
 
 button {
