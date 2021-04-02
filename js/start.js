@@ -4,7 +4,7 @@ window.onload = async function () {
     for await (let value of values) {
         let name = window.localStorage.getItem(value)
         loadCity();
-        let OnSuccess = (data) => {
+        let onSuccess = (data) => {
             document.getElementById("-1").id = value
             printNewCity(data, value);
         }
