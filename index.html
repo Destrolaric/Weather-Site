@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="author" content="Destrolaric">
     <meta name="keywords" content="Погода, Weather">
@@ -32,7 +31,7 @@
     <section class="main_city">
         <h2 class="head_city">Loading...</h2>
         <img class="weather_icon" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
-        <span class="degree"> </span>
+        <div class="degree"> </div>
 
         <ul class="weather_element" id="main_city_weather_element">
             <li>
@@ -58,26 +57,26 @@
         <h1>
             Избранное
         </h1>
-        <span class="add_city">
+        <div class="add_city">
             <input class="add_city_text_bar" id="input" type="text" placeholder="Добавить новый город..." name="add">
             <button class="add_and_close" onclick="addCity()">+</button>
-        </span>
+        </div>
     </section>
     <ul class="weather_elements">
     </ul>
 </main>
     <template id="templateFavouriteCity">
         <div class="city">
-            <span class="city_info">
+            <div class="city_info">
                 <div class="city_main_info">
                     <h3 class="name_of_city">Loading...</h3>
-                    <span class="degree_small"></span>
-                    <img class="icon_small" src="pics/refresh.svg-45_390495.svg" alt="">
+                    <div class="degree_small"></div>
+                    <img class="icon_small" src="pics/refresh.svg" alt="">
                 </div>
                 <div class="remove_button">
                     <button class="add_and_close" onclick="deleteCity(this)">x</button>
                 </div>
-            </span>
+            </div>
             <ul class="weather_element">
                 <li id="wind">
                     <p class="weatherInfo">Ветер</p> <p class="weatherInfo">...</p>
