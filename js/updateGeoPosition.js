@@ -34,5 +34,5 @@ function updateGeo() {
 
 function getDefault() {
     let name = "Null Island"
-    fetchCitybyName(name).then(onSuccess).catch(onFailure)
+    fetchCityByName(name).then(onSuccess).catch(onFailure)
 }

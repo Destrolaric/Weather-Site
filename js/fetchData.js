@@ -1,23 +1,33 @@
 const api = "b15bf862390a4bd783a42e1edb3be371"
 
-async function fetchCitybyName(name) {
-    const data = await fetch(`http://api.weatherbit.io/v2.0/current?key=${api}&city=${name}`, {
+async function fetchCityByName(name) {
+    const url = `http://api.weatherbit.io/v2.0/current?key=${api}&city=${name}`
+    let response = await fetch(url, {
         "method": "GET",
     })
-    if (data.status === 200) {
-        return await data.json();
+    if (response.status === 200) {
+        return response.json();
     }
-    alert(`${data.status}`)
-    return data
+    if (response.status === 204){
+        throw new Error("This city does not exist!")
+    }
+    else{
+        throw new Error(`something wrong ${response.status}`)
+    }
 }
 
 async function fetchCitybyCoord(lat, lon) {
-    const {json, status} = await fetch(`http://api.weatherbit.io/v2.0/current?key=${api}&lon=${lon}&lat=${lat}`, {
+    const url = `http://api.weatherbit.io/v2.0/current?key=${api}&lon=${lon}&lat=${lat}`
+    let response = await fetch(url, {
         "method": "GET",
     })
-    if (status === 200) {
-        return await json();
+    if (response.status === 200) {
+        return response.json();
     }
-    alert(`${status}`)
-    throw new Error(`ERROR №${status}`)
+    if (response.status === 204){
+        return new Error("This city does not exist!")
+    }
+    else{
+        throw new Error(`something wrong ${response.status}`)
+    }
 }

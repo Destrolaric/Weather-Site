@@ -11,6 +11,10 @@
     <script src="js/updateGeoPosition.js"></script>
     <script src="js/fetchData.js"></script>
     <script src="js/printMainCity.js"></script>
+    <script src="js/addCity.js"></script>
+    <script src="js/printNewCity.js"></script>
+    <script src="js/loadCity.js"></script>
+    <script src="js/deleteCity.js"></script>
 
 </head>
 
@@ -55,7 +59,7 @@
             Избранное
         </h1>
         <span class="add_city">
-            <input class="add_city_text_bar" type="text" placeholder="Добавить новый город..." name="add">
+            <input class="add_city_text_bar" id="input" type="text" placeholder="Добавить новый город..." name="add">
             <button class="add_and_close" onclick="addCity()">+</button>
         </span>
     </section>
@@ -66,12 +70,12 @@
         <div class="city">
             <span class="city_info">
                 <div class="city_main_info">
-                    <h4>Loading...</h4>
+                    <h3 class="name_of_city">Loading...</h3>
                     <span class="degree_small"></span>
                     <img class="icon_small" src="pics/refresh.svg-45_390495.svg" alt="">
                 </div>
                 <div class="remove_button">
-                    <button class="add_and_close">x</button>
+                    <button class="add_and_close" onclick="deleteCity(this)">x</button>
                 </div>
             </span>
             <ul class="weather_element">
