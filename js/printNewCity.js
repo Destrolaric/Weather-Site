@@ -14,7 +14,7 @@ function fillUL(ul, response) {
     let params = ul.querySelectorAll('.weatherInfo');
     params[1].textContent = response.data[0].wind_spd + "m/s";
     params[3].textContent = response.data[0].weather['description'];
-    params[5].textContent = response.data[0].pres;
+    params[5].textContent = response.data[0].pres + 'kPa';
     params[7].textContent = response.data[0].rh + '%';
     params[9].textContent = response.data[0].lon + ' ' + response.data[0].lat;
 }
