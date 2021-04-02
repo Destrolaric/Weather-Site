@@ -20,10 +20,8 @@ function updateGeo() {
     headerCity.querySelector('.degree').innerHTML = `_______`;
 
     let ul = document.querySelector('.main_city').querySelector('#main_city_weather_element');
-    console.log(ul)
 
     let params = ul.querySelectorAll('.weatherInfo');
-    console.log(params)
     params[1].textContent = '_______';
     params[3].textContent = '_______';
     params[5].textContent = '_______';
