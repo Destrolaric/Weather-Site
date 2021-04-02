@@ -7,7 +7,7 @@ window.onload = async function () {
         let onSuccess = (data) => {
             document.getElementById("-1").id = value
             printNewCity(data, value);
-        }
+        }//test
         let onFail = (e) => {
             alert(e);
             document.getElementById("-1").remove()
