@@ -291,7 +291,6 @@ h2 {
 
     .weather_elements {
         grid-template-columns: 1fr;
-        width: 100%;
     }
 
     .main_city .weather_element {
