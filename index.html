@@ -7,38 +7,43 @@
     <meta name="keywords" content="Погода, Weather">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/start.js"></script>
+    <script src="js/updateGeoPosition.js"></script>
+    <script src="js/fetchData.js"></script>
+    <script src="js/printMainCity.js"></script>
+
 </head>
 
-<body onresize="buttonWidth()">
+<body >
 <header>
     <h2 class="sub_header">
         Погода Здесь
     </h2>
-    <button class="refresh" onclick="updateGeoPosition()" id="refresh">
+    <button class="refresh" onclick="updateGeo()" id="refresh">
         <span>Обновить геолокацию</span>
         <img src="pics/refresh.svg">
     </button>
 </header>
 <main>
     <section class="main_city">
-        <h2 class="head">Loading...</h2>
+        <h2 class="head_city">Loading...</h2>
         <img class="weather_icon" src="pics/iconfinder_weather_icons-45_390495.svg" alt="">
         <span class="degree"> </span>
 
-        <ul class="weather_element">
-            <li id="wind">
+        <ul class="weather_element" id="main_city_weather_element">
+            <li>
                 <p class="weatherInfo">Ветер</p> <p class="weatherInfo">...</p>
             </li>
-            <li id="clouds">
+            <li>
                 <p class="weatherInfo">Облачность</p><p class="weatherInfo">...</p>
             </li>
-            <li id="pressure">
+            <li >
                 <p class="weatherInfo">Давление</p><p class="weatherInfo">...</p>
             </li>
-            <li id="humidity">
-                <p class="weatherInfo">Влажность</p><p class="weatherInfo">...</p>
+            <li>
+                <p class="weatherInfo">Влажность</p><p class="weatherInfo">s</p>
             </li>
-            <li id="coordinates">
+            <li >
                 <p class="weatherInfo">Координаты</p><p class="weatherInfo">...</p>
             </li>
         </ul>
@@ -51,7 +56,7 @@
         </h1>
         <span class="add_city">
             <input class="add_city_text_bar" type="text" placeholder="Добавить новый город..." name="add">
-            <button class="add_and_close">+</button>
+            <button class="add_and_close" onclick="addCity()">+</button>
         </span>
     </section>
     <ul class="weather_elements">
@@ -85,8 +90,8 @@
                 <li id="coordinates">
                     <p class="weatherInfo">Координаты</p><p class="weatherInfo">...</p>
                 </li>
+            </ul>
         </div>
     </template>
-</main>
 </body>
 </html>
