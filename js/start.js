@@ -12,7 +12,7 @@ window.onload = async function () {
             alert(e);
             document.getElementById("-1").remove()
         }
-        fetchCityByName(name).then(OnSuccess).catch(onFail);
+        fetchCityByName(name).then(onSuccess).catch(onFail);
 
     }
 }
