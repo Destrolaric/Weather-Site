@@ -4,7 +4,7 @@ const weatherCoordsURL = `${serverURL}/weather/coordinates`;
 const favouritesURL = `${serverURL}/favourite`;
 
 async function fetchCityByName(cityName) {
-  let data = await fetch(encodeURI(`${weatherURL}?q=${cityName}`));
+  let data = await fetch(`${weatherURL}?q=${cityName}`);
   if (data.status === 200) {
     return await data.json();
   }
