@@ -4,7 +4,7 @@ const weatherCoordsURL = `${serverURL}/weather/coordinates`;
 const favouritesURL = `${serverURL}/favourite`;
 
 async function fetchCityByName(cityName) {
-  let data = await fetch(`${weatherURL}?q=${cityName}`);
+  let data = await fetch(encodeURI(`${weatherURL}?q=${cityName}`));
   if (data.status === 200) {
     return await data.json();
   }
@@ -13,7 +13,7 @@ async function fetchCityByName(cityName) {
 
 
 async function fetchCityByLocation(lat, lon) {
-  let data = await fetch(`${weatherCoordsURL}?lat=${lat}&lon=${lon}`);
+  let data = await fetch(encodeURI(`${weatherCoordsURL}?lat=${lat}&lon=${lon}`));
   if (data.status === 200) {
     return await data.json();
   }
@@ -29,8 +29,7 @@ async function fetchGetFavourites() {
 }
 
 async function fetchAddCity(cityName) {
-  let data = await fetch(`${favouritesURL}?q=${cityName}`, {method: "POST"});
-  console.log('lol')
+  let data = await fetch(encodeURI(`${favouritesURL}?q=${cityName}`), {method: "POST"});
   if (data.status === 200) {
     return await data.json();
   }
@@ -42,7 +41,7 @@ async function fetchAddCity(cityName) {
 }
 
 async function fetchDeleteCity(cityName) {
-  let data = await fetch (`${favouritesURL}?q=${cityName}`, {method: "DELETE"});
+  let data = await fetch (encodeURI(`${favouritesURL}?q=${cityName}`), {method: "DELETE"});
 
   if (data.status !== 200) {
     throw new Error(`Request is bad. Status ${data.status}. Reload your page`);
