@@ -1,6 +1,11 @@
+
 function deleteCity(obj) {
-    let id = obj.parentElement.parentElement.parentElement.id;
-    window.localStorage.removeItem(id);
-    obj.parentElement.parentElement.parentElement.remove();
+    let onSuccess = () => {
+        obj.parentElement.parentElement.parentElement.remove();
+    }
+    let onFailure = (e) => {
+        alert(e);
+    }
+    fetchDeleteCity(obj.parentElement.parentElement.querySelector("h2").textContent).then(onSuccess).catch(onFailure)
 
 }

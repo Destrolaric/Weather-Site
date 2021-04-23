@@ -1,18 +1,25 @@
 window.onload = async function () {
     updateGeo()
-    let values = Object.keys(window.localStorage);
-    for await (let value of values) {
-        let name = window.localStorage.getItem(value)
-        loadCity();
-        let onSuccess = (data) => {
-            document.getElementById("-1").id = value
-            printNewCity(data, value);
-        }//test
-        let onFail = (e) => {
-            alert(e);
-            document.getElementById("-1").remove()
-        }
-        fetchCityByName(name).then(onSuccess).catch(onFail);
 
+    let onSuccess = (data) => {
+        for (let cityName of data.favouriteCities) {
+            let city = loadCity();
+
+            let onSuccessFetch = (data) => {
+                printNewCity(data, city);
+            }
+
+            let onFailFetch = (e) => {
+                city.remove();
+                return;
+            }
+
+            fetchCityByName(cityName).then(onSuccessFetch).catch(onFailFetch);
+        }
     }
+
+    let onFail = (e) => {
+    }
+    fetchGetFavourites().then(onSuccess).catch(onFail);
+
 }

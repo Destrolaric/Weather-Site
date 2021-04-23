@@ -8,7 +8,7 @@ let onFailure = (e) => {
 async function getWeatherFromPosition(pos) {
     let lat = pos.coords.latitude
     let lon = pos.coords.longitude
-    fetchCityByCoordinate(lat, lon).then(onSuccess).catch(onFailure)
+    fetchCityByLocation(lat, lon).then(onSuccess).catch(onFailure)
 }
 
 function updateGeo() {

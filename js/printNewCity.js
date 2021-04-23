@@ -1,10 +1,9 @@
-function printNewCity(response, id) {
+function printNewCity(response, city) {
 
-    let main_city = document.getElementById(`${id}`);
-    main_city.querySelector('.name_of_city').textContent = response.data[0].city_name;
-    main_city.querySelector('.icon_small').src = `https://www.weatherbit.io/static/img/icons/${response.data[0].weather.icon}.png `;
-    main_city.querySelector('.degree_small').innerHTML = response.data[0].temp + "°C";
-    let ul = main_city.querySelector('.weather_element');
+    city.querySelector('.name_of_city').textContent = response.data[0].city_name;
+    city.querySelector('.icon_small').src = `https://www.weatherbit.io/static/img/icons/${response.data[0].weather.icon}.png `;
+    city.querySelector('.degree_small').innerHTML = response.data[0].temp + "°C";
+    let ul = city.querySelector('.weather_element');
     fillUL(ul, response)
 
 

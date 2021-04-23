@@ -6,4 +6,5 @@ function loadCity()
 
     let clone = document.importNode(template.content, true);
     cities.append(clone);
+    return cities.lastElementChild;
 }
