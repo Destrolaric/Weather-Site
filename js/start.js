@@ -1,6 +1,6 @@
 window.onload = async function () {
     updateGeo()
-
+    pressEnter()
     let onSuccess = (data) => {
         for (let cityName of data.favouriteCities) {
             let city = loadCity();
@@ -11,7 +11,7 @@ window.onload = async function () {
 
             let onFailFetch = (e) => {
                 city.remove();
-                return;
+
             }
 
             fetchCityByName(cityName).then(onSuccessFetch).catch(onFailFetch);
